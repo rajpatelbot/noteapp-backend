@@ -7,7 +7,7 @@ const noteRouter = require("./routes/notesRouter");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
-connectToDB();
+// connectToDB();
 
 app.use(express.json()); // TO ACCEPT JSON REQUEST ON SERVER
 app.use(cookieParser());
@@ -28,7 +28,7 @@ app.get("*", (req, res) => {
 });
 
 // PORT LISTNER
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 app.use(
   (PORT,
   (req, res) => {
